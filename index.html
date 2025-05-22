@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Existing meta tags -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  
+  <!-- SEO Meta Tags -->
+  <title>Said Jumapili | Professional Web Developer | Wecode.com</title>
+  <meta name="description" content="Professional business card of Said Jumapili, Web Developer at Wecode.com. Contact via phone +255 763 038 518 or email said@wecode.com">
+  <meta name="keywords" content="Said Jumapili, Web Developer, Tanzania Developer, Wecode, Portfolio, HTML, CSS, JavaScript, Frontend Developer">
+  <meta name="author" content="Said Jumapili">
+  
+  <!-- Open Graph / Social Media Meta Tags -->
+  <meta property="og:title" content="Said Jumapili | Professional Web Developer">
+  <meta property="og:description" content="Connect with Said Jumapili, Web Developer at Wecode.com">
+  <meta property="og:type" content="profile">
+  <meta property="og:url" content="https://yourwebsite.com/business-card">
+  <meta property="og:image" content="https://yourwebsite.com/images/profile.jpg">
+  <meta property="og:site_name" content="Said Jumapili Professional Profile">
+  <meta property="profile:first_name" content="Said">
+  <meta property="profile:last_name" content="Jumapili">
+  <meta property="profile:username" content="SaidJumapili">
+  
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@YourTwitterHandle">
+  <meta name="twitter:creator" content="@SaidJumapili">
+  <meta name="twitter:title" content="Said Jumapili | Web Developer">
+  <meta name="twitter:description" content="Professional profile and contact information for Said Jumapili, Web Developer">
+  <meta name="twitter:image" content="https://yourwebsite.com/images/profile.jpg">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://yourwebsite.com/business-card">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+  <!-- Existing stylesheet link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    :root {
+      --primary: #2d3748;
+      --secondary: #4a5568;
+      --light: #f8fafc;
+      --background: #f5f7fa;
+      --card-bg: white;
+      --text-color: #2d3748;
+      --hr-color: #e2e8f0;
+      --hover-bg: rgba(66, 153, 225, 0.1);
+      --social-border: rgba(0, 0, 0, 0.1);
+      --whatsapp: #25D366;
+      --whatsapp-dark: #128C7E;
+      --linkedin: #0077B5;
+      --github: #333333;
+      --facebook: #1877F2;
+      --instagram: #E1306C;
+      --x-twitter: #000000;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --primary: #e2e8f0;
+        --secondary: #a0aec0;
+        --light: #1a202c;
+        --background: #1a202c;
+        --card-bg: #2d3748;
+        --text-color: #e2e8f0;
+        --hr-color: #4a5568;
+        --hover-bg: rgba(66, 153, 225, 0.2);
+        --social-border: rgba(255, 255, 255, 0.1);
+        --github: #f0f0f0;
+        --x-twitter: #ffffff;
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      background: var(--background);
+      line-height: 1.6;
+      padding: 20px;
+      color: var(--text-color);
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .business-card {
+      width: 100%;
+      max-width: 340px;
+      background: var(--card-bg);
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      padding: 25px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      min-height: auto;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .business-card {
+        box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .business-card {
+        padding: 20px;
+        max-width: 320px;
+      }
+    }
+
+    .profile-image {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 15px;
+      border: 4px solid var(--card-bg);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: border-color 0.3s ease;
+    }
+
+    @media (max-width: 480px) {
+      .profile-image {
+        width: 100px;
+        height: 100px;
+      }
+    }
+
+    .full-name {
+      font-size: 22px;
+      font-weight: 700;
+      margin: 10px 0 5px;
+      color: var(--primary);
+      transition: color 0.3s ease;
+    }
+
+    @media (max-width: 480px) {
+      .full-name {
+        font-size: 20px;
+      }
+    }
+
+    .designation {
+      color: var(--secondary);
+      margin: 5px 0;
+      font-weight: 500;
+      font-size: 15px;
+      transition: color 0.3s ease;
+    }
+
+    @media (max-width: 480px) {
+      .designation {
+        font-size: 14px;
+      }
+    }
+
+    .company {
+      margin: 5px 0;
+      color: var(--secondary);
+      opacity: 0.8;
+      font-size: 14px;
+      transition: color 0.3s ease;
+    }
+
+    hr {
+      border: 0;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--hr-color), transparent);
+      margin: 18px 0;
+      transition: background 0.3s ease;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin: 18px 0;
+    }
+
+    .contact-item a {
+      color: var(--primary);
+      text-decoration: none;
+      transition: all 0.25s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 8px 10px;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 480px) {
+      .contact-item a {
+        font-size: 13px;
+        padding: 6px 8px;
+      }
+    }
+
+    .contact-item a:hover {
+      background: var(--hover-bg);
+      color: #4299e1;
+      transform: translateY(-2px);
+    }
+
+    .contact-item i {
+      font-size: 16px;
+      width: 20px;
+      text-align: center;
+    }
+
+    .social-media {
+      margin: 20px 0;
+    }
+
+    .social-media h2 {
+      font-size: 16px;
+      margin-bottom: 15px;
+      color: var(--primary);
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .social-links a {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: transparent;
+      font-size: 18px;
+      transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      box-shadow: none;
+      border: 2px solid var(--social-border);
+    }
+
+    @media (max-width: 480px) {
+      .social-links a {
+        width: 36px;
+        height: 36px;
+        font-size: 16px;
+      }
+    }
+
+    .social-links a:hover {
+      transform: translateY(-4px) scale(1.1);
+      box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    }
+
+    .social-links .x-twitter { 
+      color: var(--x-twitter);
+      border-color: var(--social-border);
+    }
+    .social-links .x-twitter:hover {
+      background: var(--hover-bg);
+    }
+    .social-links .linkedin { color: var(--linkedin); }
+    .social-links .github { color: var(--github); }
+    .social-links .facebook { color: var(--facebook); }
+    .social-links .instagram { 
+      color: #E1306C;
+    }
+
+    /* X (Twitter) icon styles */
+    .x-icon {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
+    }
+
+    @media (max-width: 480px) {
+      .x-icon {
+        width: 16px;
+        height: 16px;
+      }
+    }
+
+    /* WhatsApp Button Inside Card */
+    .business-card .whatsapp-float {
+      position: relative;
+      margin-top: 15px;
+    }
+
+    .business-card .whatsapp-btn {
+      width: 46px;
+      height: 46px;
+      background: var(--card-bg);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+      transition: all 0.3s ease;
+    }
+
+    @media (max-width: 480px) {
+      .business-card .whatsapp-btn {
+        width: 42px;
+        height: 42px;
+      }
+    }
+
+    .business-card .whatsapp-btn i {
+      color: var(--whatsapp);
+      font-size: 24px;
+    }
+
+    @media (max-width: 480px) {
+      .business-card .whatsapp-btn i {
+        font-size: 22px;
+      }
+    }
+
+    .business-card .whatsapp-popup {
+      position: relative;
+      bottom: auto;
+      right: auto;
+      margin: 8px auto 0;
+      background: var(--card-bg);
+      padding: 8px 12px;
+      border-radius: 6px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+      width: max-content;
+      max-width: 90%;
+      text-align: center;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: all 0.3s ease;
+      color: var(--primary);
+      font-weight: 500;
+      font-size: 14px;
+    }
+
+    @media (max-width: 480px) {
+      .business-card .whatsapp-popup {
+        font-size: 13px;
+        padding: 6px 10px;
+      }
+    }
+
+    .business-card .whatsapp-popup::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-top: 8px solid var(--card-bg);
+    }
+
+    /* Dark mode toggle button */
+    .dark-mode-toggle {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      color: var(--secondary);
+      font-size: 18px;
+      transition: color 0.3s ease;
+      z-index: 10;
+    }
+
+    .dark-mode-toggle:hover {
+      color: var(--primary);
+    }
+
+    /* Touch devices */
+    @media (hover: none) {
+      .contact-item a:hover {
+        transform: none;
+        background: transparent;
+      }
+      
+      .social-links a:hover {
+        transform: none;
+        box-shadow: none;
+      }
+      
+      .business-card .whatsapp-float:hover .whatsapp-popup {
+        opacity: 0;
+      }
+    }
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Said Jumapili",
+  "jobTitle": "Web Developer",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Wecode.com"
+  },
+  "telephone": "+255763038518",
+  "email": "mailto:said@wecode.com",
+  "sameAs": [
+    "https://www.linkedin.com/in/said-jumapili-3b5212153",
+    "https://github.com/SaidJumapili",
+    "https://twitter.com/YourTwitterHandle"
+  ]
+}
+</script>
+</head>
+<body>
+  <div class="business-card">
+    <button class="dark-mode-toggle" aria-label="Toggle dark mode">
+      <i class="fas fa-moon"></i>
+    </button>
+    <img src="SAID.JPG" class="profile-image" alt="Said Jumapili">
+    <p class="full-name">SAID JUMAPILI</p>
+    <p class="designation">Web Developer</p>
+    <p class="company">Wecode.com</p>
+
+    <hr>
+
+    <div class="contact-info">
+      <div class="contact-item">
+        <a href="tel:+255763038518">
+          <i class="fas fa-phone"></i>
+          <span>+255 763 038 518</span>
+        </a>
+      </div>
+      <div class="contact-item">
+        <a href="mailto:said@wecode.com">
+          <i class="fas fa-envelope"></i>
+          <span>said@wecode.com</span>
+        </a>
+      </div>
+      <div class="contact-item">
+        <a href="#">
+          <i class="fas fa-globe"></i>
+          <span>Portfolio</span>
+        </a>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="social-media">
+      <h2>Connect with me</h2>
+      <div class="social-links">
+        <a href="https://x.com/JumapiliSaid?t=YJuh_EgPtLz3WbRQHApBEw&s=09" class="x-twitter" aria-label="Twitter" title="Twitter">
+          <svg class="x-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com/in/said-jumapili-3b5212153" class="linkedin" title="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://github.com/SaidJumapili" class="github" title="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.facebook.com/" class="facebook" title="Facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://www.instagram.com/" class="instagram" title="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- WhatsApp Button Inside Card -->
+    <div class="whatsapp-float">
+      <div class="whatsapp-popup">Chat with me on WhatsApp!</div>
+      <a href="https://wa.me/255763038518" target="_blank" class="whatsapp-btn">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const popup = document.querySelector('.whatsapp-popup');
+      const whatsappFloat = document.querySelector('.whatsapp-float');
+      const darkModeToggle = document.querySelector('.dark-mode-toggle');
+      const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+      
+      // Check if the device supports hover
+      const hasHover = window.matchMedia('(hover: hover)').matches;
+      
+      // Show popup on page load only for non-touch devices
+      if (hasHover) {
+        setTimeout(() => {
+          popup.style.opacity = '1';
+          popup.style.transform = 'translateY(0)';
+          // Hide after 3 seconds
+          setTimeout(() => {
+            popup.style.opacity = '0';
+            popup.style.transform = 'translateY(10px)';
+          }, 3000);
+        }, 1000);
+      }
+      
+      // Show popup on hover (only for devices that support hover)
+      if (hasHover) {
+        whatsappFloat.addEventListener('mouseenter', function() {
+          popup.style.opacity = '1';
+          popup.style.transform = 'translateY(0)';
+        });
+        whatsappFloat.addEventListener('mouseleave', function() {
+          popup.style.opacity = '0';
+          popup.style.transform = 'translateY(10px)';
+        });
+      }
+      
+      // For touch devices, show popup on click/tap
+      whatsappFloat.addEventListener('click', function(e) {
+        if (!hasHover) {
+          e.preventDefault();
+          popup.style.opacity = '1';
+          popup.style.transform = 'translateY(0)';
+          setTimeout(() => {
+            popup.style.opacity = '0';
+            popup.style.transform = 'translateY(10px)';
+            // After animation completes, follow the link
+            setTimeout(() => {
+              window.location.href = e.target.closest('a').href;
+            }, 300);
+          }, 2000);
+        }
+      });
+
+      // Dark mode toggle functionality
+      function setDarkMode(isDark) {
+        document.documentElement.classList.toggle('dark-mode', isDark);
+        darkModeToggle.innerHTML = isDark ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+        localStorage.setItem('darkMode', isDark ? 'enabled' : 'disabled');
+      }
+
+      // Check for saved user preference or use system preference
+      const savedMode = localStorage.getItem('darkMode');
+      if (savedMode === 'enabled' || (savedMode === null && prefersDarkScheme.matches)) {
+        setDarkMode(true);
+      }
+
+      // Toggle dark mode on button click
+      darkModeToggle.addEventListener('click', () => {
+        const isDark = !document.documentElement.classList.contains('dark-mode');
+        setDarkMode(isDark);
+      });
+
+      // Watch for system preference changes
+      prefersDarkScheme.addListener((e) => {
+        if (localStorage.getItem('darkMode') === null) {
+          setDarkMode(e.matches);
+        }
+      });
+    });
+  </script>
+</body>
+</html>
